@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Result System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <div>
+
+            <h1>🎓 Student Result System</h1>
+
+            <p>
+                Beginner Dockerized Web Application
+            </p>
+
+        </div>
+
+        <div class="docker-badge">
+            🐳 Docker
+        </div>
+
+    </header>
+
+
+    <!-- ADD STUDENT -->
+
+    <section class="card">
+
+        <h2>Add Student</h2>
+
+        <form id="studentForm">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>
+                        Student Name
+                    </label>
+
+                    <input
+                        id="name"
+                        type="text"
+                        placeholder="Enter student name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Register Number
+                    </label>
+
+                    <input
+                        id="registerNo"
+                        type="text"
+                        placeholder="Enter register number"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Department
+                    </label>
+
+                    <select id="department" required>
+
+                        <option value="">
+                            Select department
+                        </option>
+
+                        <option value="CSE">
+                            CSE
+                        </option>
+
+                        <option value="ECE">
+                            ECE
+                        </option>
+
+                        <option value="EEE">
+                            EEE
+                        </option>
+
+                        <option value="MECH">
+                            MECH
+                        </option>
+
+                        <option value="CIVIL">
+                            CIVIL
+                        </option>
+
+                        <option value="IT">
+                            IT
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Marks
+                    </label>
+
+                    <input
+                        id="marks"
+                        type="number"
+                        min="0"
+                        max="100"
+                        placeholder="0 - 100"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="primary-btn"
+                type="submit">
+
+                ➕ Add Student
+
+            </button>
+
+            <p id="message"></p>
+
+        </form>
+
+    </section>
+
+
+    <!-- STUDENT LIST -->
+
+    <section class="card">
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>Students</h2>
+
+                <p id="studentCount">
+                    0 students
+                </p>
+
+            </div>
+
+
+            <input
+                id="searchInput"
+                class="search"
+                type="text"
+                placeholder="🔍 Search student"
+            >
+
+        </div>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Name</th>
+
+                        <th>Register No</th>
+
+                        <th>Department</th>
+
+                        <th>Marks</th>
+
+                        <th>Result</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="studentTableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div
+            id="emptyState"
+            class="empty-state">
+
+            No students found.
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

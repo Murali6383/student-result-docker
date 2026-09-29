@@ -1,0 +1,12 @@
+{
+  "name": "student-result-docker",
+  "version": "1.0.0",
+  "description": "Beginner Student Result Management System with Docker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
